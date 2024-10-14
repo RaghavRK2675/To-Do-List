@@ -8,6 +8,13 @@ const Page = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+
+    // Check if title and description are not empty
+    if (title.trim() === "" || description.trim() === "") {
+      alert("Please fill in both fields!");
+      return; // Prevent adding empty task
+    }
+
     setMainTask([...maintask, { title, description }]);
     setTitle("");
     setDescription("");
