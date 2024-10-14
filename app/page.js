@@ -22,7 +22,7 @@ const Page = () => {
   // Default message when no tasks exist
   let renderedTask = (
     <h2>
-      <br></br>
+      <br />
       <center>No tasks yet</center>
     </h2>
   );
@@ -64,8 +64,17 @@ const Page = () => {
     <>
       <br />
       <h1 className="text-white p-5 text-5xl font-bold text-center">To Do List</h1>
-      <br />
-      <br />
+      
+      {/* Welcome message and link */}
+      <div className="text-center">
+        <h1>Welcome to the To-Do List App</h1>
+        <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer">
+          
+        </a>
+      </div>
+      
+      <br/>
+      <br/>
 
       <form className="flex justify-center" onSubmit={submitHandler}>
         <center>
